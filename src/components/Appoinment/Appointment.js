@@ -29,7 +29,7 @@ const Appointment = () => {
                
                <Calendar onChange={onChange} value={date}></Calendar> 
                 {
-                    date && <p>{fullDate}</p>
+                    date && <p>Appointments available on - {fullDate}</p>
                 }
 
                 {
