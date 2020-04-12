@@ -28,7 +28,7 @@ const Modal1 = (props) => {
         }
     const { register, handleSubmit, watch, errors } = useForm()
   const onSubmit = data => {
-      const appointmentdetail={Date:props.fullDate,Name:data.name, Mobile:data.phone,Gender:data.gender,Age:data.age,status:"pending"};
+      const appointmentdetail={Time:data.time,Date:props.fullDate,Name:data.name, Mobile:data.phone,Gender:data.gender,Age:data.age,status:"pending"};
       console.log(appointmentdetail);
       fetch('http://localhost:4200/addAppointment', {
       method: 'POST',
@@ -60,6 +60,14 @@ const Modal1 = (props) => {
                         <p>{props.fullDate}</p>
                         <form className="form-group" onSubmit={handleSubmit(onSubmit)}>
 
+                        <select className="form-control"  name="time" ref={register({ required: true })} >
+                            <option disabled={true} selected value="not added">Select Time</option>
+                            <option  value="7:00 AM">7:00 AM</option>
+                            <option value="7:20 AM">7:20 AM</option>
+                            <option value="8:00 AM">8:00 AM</option>
+                        </select>
+                        {errors.time && <span>This field is required</span>}
+                        <br/>
       
                         {/* include validation with required or other standard HTML validation rules */}
                         <input  className="form-control" type="text" name="name" placeholder="Your Name" ref={register({ required: true })} />
@@ -72,8 +80,8 @@ const Modal1 = (props) => {
                         <br/>
 
                         <select className="form-control"  name="gender" ref={register({ required: true })} >
-                            <option disabled={true} value="Not set">Select Gender</option>
-                            <option value="male">Male</option>
+                            <option disabled={true} selected value="not added">Select Gender</option>
+                            <option  value="male">Male</option>
                             <option value="female">Female</option>
                             <option value="others">Others</option>
                         </select>

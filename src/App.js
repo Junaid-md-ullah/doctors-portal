@@ -7,8 +7,10 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
+import AppointmentsFilter from './components/AppointmentsFilter/AppointmentsFilter';
+import Header from './components/Header/Header';
+import Banner from './components/Banner/Banner';
 
 
 function App() {
@@ -16,11 +18,19 @@ function App() {
     <div className="App">
       <Router>
       <Switch>
+        <Route exact path="/">
+          <Header></Header>
+          <Banner></Banner>
+        </Route>
         <Route path="/dashboard">
         <Dashboard></Dashboard>
         </Route>
       <Route path="/getAppointment">
+        <Header></Header>
       <Appointment></Appointment>
+      </Route>
+      <Route path="/appointmentsFilter">
+        <AppointmentsFilter></AppointmentsFilter>
       </Route>
       
       </Switch>

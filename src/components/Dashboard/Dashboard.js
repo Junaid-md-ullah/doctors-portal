@@ -28,7 +28,7 @@ const Dashboard = () => {
                 <tbody>
                     {
                         
-                        allAppointments.map(alp=>
+                        allAppointments && allAppointments.map(alp=>
                             <tr>
                                 <td>{serial++}</td>
                                 <td>{alp.Date}</td>
