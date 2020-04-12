@@ -48,7 +48,7 @@ const Modal1 = (props) => {
 
     return (
         <div>
-            <button onClick={openModal}>Open Modal</button>
+            <button className="btn" style={{backgroundColor:'#18c7be',color:'white', border:'none'}} onClick={openModal}>Book Appointment</button>
         <Modal
           isOpen={modalIsOpen}
           

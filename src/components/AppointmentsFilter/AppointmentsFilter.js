@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'react-calendar/dist/Calendar.css';
 import Calendar from 'react-calendar';
+import './AppointmentsFilter.css'
 const AppointmentsFilter = () => {
     let serial=1;
     const months=['Jan','Feb','Mar','Apr','May','June','July'];
@@ -23,12 +24,12 @@ const AppointmentsFilter = () => {
     },[appointments])
     return (
         <div className="container">
-            <div className="row">
-                <div className="col-md-6">
+            <div className="row d-flex justify-content-between">
+                <div className="col-md-4 each-column d-flex justify-content-center">
                 <Calendar onChange={onChange} value={date}></Calendar>
                 </div>
 
-                <div className="col-md-6">
+                <div className="col-md-7 each-column">
                 <table className="table">
                 <thead>
                     <tr className="text-center">
@@ -51,6 +52,7 @@ const AppointmentsFilter = () => {
                                 <td>{alp.From}</td>
                                 <td>{alp.Name}</td>
                                 <td>{alp.Mobile}</td>
+                                <td><button>Add Prescription</button></td>
                                 <td>{alp.status}</td>
                             
                             </tr>

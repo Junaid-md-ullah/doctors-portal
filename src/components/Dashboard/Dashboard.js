@@ -13,6 +13,43 @@ const Dashboard = () => {
 
     return (
         <div>
+            <div className="row d-flex justify-content-center" style={{padding:'50px'}}>
+                <div className="col-md-3">
+                <div class="card text-white bg-primary mb-3" style={{maxWidth: "18rem"}}>
+                <div class="card-body d-flex justify-content-between">
+                        <h1 class="card-title">09</h1>
+                        <h5 class="card-text" style={{textAlign:'left',paddingLeft:'12px'}}>Pending Appointments</h5>
+                </div>
+                </div>
+            </div>
+
+            <div className="col-md-3">
+                <div class="card text-white bg-primary mb-3" style={{maxWidth: "18rem"}}>
+                    <div class="card-body d-flex justify-content-between">
+                        <h1 class="card-title">09</h1>
+                        <h5 class="card-text" style={{textAlign:'left',paddingLeft:'12px'}}>Today's Appointment</h5>
+                </div>
+                </div>
+            </div>
+            <div className="col-md-3">
+                <div class="card text-white bg-primary mb-3" style={{maxWidth: "18rem"}}>
+                <div class="card-body d-flex justify-content-between">
+                        <h1 class="card-title">09</h1>
+                        <h5 class="card-text" style={{textAlign:'left',paddingLeft:'12px'}}>Total  Appointments</h5>
+                </div>
+                </div>
+            </div>
+            <div className="col-md-3">
+                <div class="card text-white bg-primary mb-3" style={{maxWidth: "18rem"}}>
+                <div class="card-body d-flex justify-content-start">
+                        <h1 class="card-title">09</h1>
+                        <h5 class="card-text" style={{textAlign:'left',paddingLeft:'15px'}}>Total Patients</h5>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div className="row" style={{padding:'50px'}}>
+                <h3 style={{color:'#18c7be'}}>Recent Appointments</h3>
             <table className="table">
                 <thead>
                     <tr className="text-center">
@@ -35,6 +72,7 @@ const Dashboard = () => {
                                 <td>{alp.From}</td>
                                 <td>{alp.Name}</td>
                                 <td>{alp.Mobile}</td>
+                                <td><button>Add Prescription</button></td>
                                 <td>{alp.status}</td>
                             
                             </tr>
@@ -42,6 +80,8 @@ const Dashboard = () => {
                     }
                 </tbody>
             </table>
+            </div>
+            
         </div>
     );
 };

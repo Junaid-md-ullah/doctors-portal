@@ -23,6 +23,7 @@ function App() {
           <Banner></Banner>
         </Route>
         <Route path="/dashboard">
+        <Header></Header>
         <Dashboard></Dashboard>
         </Route>
       <Route path="/getAppointment">
@@ -30,6 +31,7 @@ function App() {
       <Appointment></Appointment>
       </Route>
       <Route path="/appointmentsFilter">
+      <Header></Header>
         <AppointmentsFilter></AppointmentsFilter>
       </Route>
       

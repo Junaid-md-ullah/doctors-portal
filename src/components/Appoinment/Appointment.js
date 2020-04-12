@@ -45,24 +45,30 @@ const Appointment = () => {
                
                <div>
                     {
-                        date && <h3>Appointments available on - {fullDate}</h3>
+                        date && <h3 style={{color:'#18c7be'}}>Appointments available on - {fullDate}</h3>
                     }
                </div>
                 
-                   
-
+                
+                <div className="row d-flex justify-content-between align-items-center" style={{padding:"90px",width:'1300px'}}>
+                    
                     {
                         departments.map(departments=>
                 
-                        
-                        <DoctorType 
-                        className="col-md-4"
+    
+                            <DoctorType
                         departments={departments}
                         fullDate={fullDate}
                         >
                         </DoctorType >
                         )
+                        
                     }
+
+                    
+                </div>  
+                
+                    
                     
                     
 

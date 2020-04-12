@@ -15,7 +15,7 @@ const Header = () => {
                 <div className="navbar-nav">
                 <a class="nav-item nav-link active" style={{paddingRight:'64px'}} href="/">Home <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" style={{paddingRight:'64px'}} href="/dashboard">Dashboard</a>
-                <a class="nav-item nav-link" style={{paddingRight:'64px'}} href="#">About</a>
+                <a class="nav-item nav-link" style={{paddingRight:'64px'}} href="/appointmentsFilter">Appointments</a>
                 <a class="nav-item nav-link" style={{paddingRight:'124px'}} href="#">Contact Us</a>
                 </div>
                 

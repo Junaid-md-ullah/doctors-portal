@@ -8,11 +8,13 @@ const DoctorType = (props) => {
     return (
         
             
-            <div>
-                <p>{type}</p>
-                <p>{time}</p>
-                <p>{available}</p>
-                <Modal from={from} fullDate={fullDate} ></Modal>
+            <div className="col-md-3 offset-md-0.1 justify-content-around department-cards">
+
+                <h5 style={{color:'#18c7be'}}>{type}</h5>
+                <p><strong>{time}</strong></p>
+                <p style={{color:'gray'}}>{available} spaces available</p>
+                <Modal  from={from} fullDate={fullDate} ></Modal>
+                
             </div>
                 
             
