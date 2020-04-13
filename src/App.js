@@ -13,6 +13,7 @@ import Header from './components/Header/Header';
 import Banner from './components/Banner/Banner';
 
 
+
 function App() {
   return (
     <div className="App">
@@ -34,7 +35,7 @@ function App() {
       <Header></Header>
         <AppointmentsFilter></AppointmentsFilter>
       </Route>
-      
+    
       </Switch>
       </Router>
       

@@ -57,14 +57,15 @@ const Modal1 = (props) => {
           contentLabel="Example Modal"
         >
 
-                        <p>{props.fullDate}</p>
+                        <h5>Appointment on {props.fullDate}</h5>
                         <form className="form-group" onSubmit={handleSubmit(onSubmit)}>
 
                         <select className="form-control"  name="time" ref={register({ required: true })} >
                             <option disabled={true} selected value="not added">Select Time</option>
-                            <option  value="7:00 AM">7:00 AM</option>
-                            <option value="7:20 AM">7:20 AM</option>
-                            <option value="8:00 AM">8:00 AM</option>
+                            <option  value={props.from[0]}>{props.from[0]}</option>
+                            <option value={props.from[1]}>{props.from[1]}</option>
+                            <option value={props.from[2]}>{props.from[2]}</option>
+                            <option value={props.from[3]}>{props.from[3]}</option>
                         </select>
                         {errors.time && <span>This field is required</span>}
                         <br/>

@@ -39,7 +39,7 @@ const AppointmentsFilter = () => {
                         <th className="text-secondary" scope="col">Name</th>
                         <th className="text-secondary" scope="col">Phone No.</th>
                         <th className="text-secondary" scope="col">Prescription</th>
-                        <th className="text-secondary" scope="col">Action</th>
+                        <th className="text-secondary" scope="col">Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -49,7 +49,7 @@ const AppointmentsFilter = () => {
                             <tr>
                                 <td>{serial++}</td>
                                 <td>{alp.Date}</td>
-                                <td>{alp.From}</td>
+                                <td>{alp.Time}</td>
                                 <td>{alp.Name}</td>
                                 <td>{alp.Mobile}</td>
                                 <td><button>Add Prescription</button></td>
