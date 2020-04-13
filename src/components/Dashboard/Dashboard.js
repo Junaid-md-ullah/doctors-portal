@@ -58,7 +58,7 @@ const Dashboard = () => {
             </div>
 
             <div className="col-md-3">
-                <div class="card text-white bg-primary mb-3" style={{maxWidth: "18rem"}}>
+                <div class="card text-white bg-secondary mb-3" style={{maxWidth: "18rem"}}>
                     <div class="card-body d-flex justify-content-between">
                         <h1 class="card-title">{("0"+todaysAppointment.length).slice(-2)}</h1>
                         <h5 class="card-text" style={{textAlign:'left',paddingLeft:'12px'}}>Today's Appointment</h5>
@@ -66,7 +66,7 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className="col-md-3">
-                <div class="card text-white bg-primary mb-3" style={{maxWidth: "18rem"}}>
+                <div class="card text-white bg-info mb-3" style={{maxWidth: "18rem"}}>
                 <div class="card-body d-flex justify-content-between">
                         <h1 class="card-title">{("0"+allAppointments.length).slice(-2)}</h1>
                         <h5 class="card-text" style={{textAlign:'left',paddingLeft:'12px'}}>Total  Appointments</h5>
@@ -74,7 +74,7 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className="col-md-3">
-                <div class="card text-white bg-primary mb-3" style={{maxWidth: "18rem"}}>
+                <div class="card text-white bg-success mb-3" style={{maxWidth: "18rem"}}>
                 <div class="card-body d-flex justify-content-start">
                         <h1 class="card-title">{("0"+totalPatients.length).slice(-2)}</h1>
                         <h5 class="card-text" style={{textAlign:'left',paddingLeft:'15px'}}>Total Patients</h5>
