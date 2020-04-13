@@ -10,7 +10,7 @@ const Banner = () => {
                     <div className="col-md-5 justify-content-center">
                         <h1>Your New Smile Start Here</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliq</p>
-                        <Link to="/getAppointment"><button className="btn btn-secondary">Get Appointment</button></Link>
+                        <Link to="/getAppointment"><button className="btn btn-primary">Get Appointment</button></Link>
                     </div>
                     <div className="col-md-7">
                         <img width="600px" src={Mask1} alt=""/>

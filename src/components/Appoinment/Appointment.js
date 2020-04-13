@@ -8,7 +8,7 @@ import {
 import DoctorType from '../DoctorType/DoctorType';
 const Appointment = () => {
     const [departments,setDepartments]=useState([]);
-    const months=['Jan','Feb','Mar','Apr']
+    const months=['Jan','Feb','Mar','Apr','May','Jun','July','Aug','Sep','Oct','Nov','Dec'];
     const [date,setDate]=useState(new Date());
     const onChange=(date)=>{
         setDate(date);
@@ -20,7 +20,7 @@ const Appointment = () => {
     const fullDate=`${date1} ${months[month]} ${year}`;
 
     useEffect(()=>{
-        fetch('http://localhost:4200/departs')
+        fetch('https://intense-wildwood-06571.herokuapp.com/departs')
         .then(res=>res.json())
         .then(data=>{
                 setDepartments(data);

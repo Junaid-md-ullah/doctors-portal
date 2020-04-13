@@ -17,7 +17,7 @@ const Dashboard = () => {
     const handleStatuschange=(status)=>{
         const update={id:selectedAppointment._id,status};
 
-          fetch("http://localhost:4200/updateStatus",{
+          fetch("https://intense-wildwood-06571.herokuapp.com/updateStatus",{
             method : "POST",
             headers : {
                 "Content-type" : "application/json"
@@ -36,7 +36,7 @@ const Dashboard = () => {
 
 
     useEffect(()=>{
-        fetch('http://localhost:4200/appointments')
+        fetch('https://intense-wildwood-06571.herokuapp.com/appointments')
         .then(res=>res.json())
         .then(data=>{
                 setAllAppointments(data);

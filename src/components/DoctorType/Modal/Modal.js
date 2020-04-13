@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-modal';
 import './Modal.css';
 import { useForm } from 'react-hook-form';
 const Modal1 = (props) => {
+  const [isBooked,SetIsBooked]=useState(false);
     const customStyles = {
         content : {
           top                   : '50%',
@@ -30,7 +31,7 @@ const Modal1 = (props) => {
   const onSubmit = data => {
       const appointmentdetail={Time:data.time,Date:props.fullDate,Name:data.name, Mobile:data.phone,Gender:data.gender,Age:data.age,status:"pending"};
       console.log(appointmentdetail);
-      fetch('http://localhost:4200/addAppointment', {
+      fetch('https://intense-wildwood-06571.herokuapp.com/addAppointment', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -42,8 +43,10 @@ const Modal1 = (props) => {
       .then(res => res.json())
       .then(appointments => {
         console.log(appointments);
-    
       })
+   }
+   if(isBooked){
+     setTimeout(()=>SetIsBooked(false),2000);
    }
 
     return (
@@ -58,6 +61,11 @@ const Modal1 = (props) => {
         >
 
                         <h5>Appointment on {props.fullDate}</h5>
+                        {isBooked && 
+
+                          <p className="text-success">Appointment Submitted</p>
+                        }
+                        
                         <form className="form-group" onSubmit={handleSubmit(onSubmit)}>
 
                         <select className="form-control"  name="time" ref={register({ required: true })} >
@@ -93,8 +101,8 @@ const Modal1 = (props) => {
                         {/* errors will return when field validation fails  */}
                         {errors.age && <span>This field is required</span>}
                         <br/>
-                        <input type="submit" />
-                        <button onClick={closeModal}>close</button>
+                        <input className="btn btn-success" onClick={()=>SetIsBooked(true)} type="submit" value="Book" />
+                        <button className="btn btn-danger" onClick={closeModal}>close</button>
                      </form>
 
                      </Modal>

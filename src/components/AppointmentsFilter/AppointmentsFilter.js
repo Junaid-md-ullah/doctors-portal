@@ -4,7 +4,7 @@ import Calendar from 'react-calendar';
 import './AppointmentsFilter.css'
 const AppointmentsFilter = () => {
     let serial=1;
-    const months=['Jan','Feb','Mar','Apr','May','June','July'];
+    const months=['Jan','Feb','Mar','Apr','May','June','July','Aug','Sep','Oct','Nov','Dec'];
     const [appointments,setAppointments]=useState([])
     const [date,setDate]=useState(new Date())
     const onChange=(date)=>{
@@ -16,7 +16,7 @@ const AppointmentsFilter = () => {
     const fullDate=`${date1} ${months[month]} ${year}`;
     const appointmentsDateWise=appointments.filter(ap=>ap.Date==fullDate)
     useEffect(()=>{
-        fetch('http://localhost:4200/appointments')
+        fetch('https://intense-wildwood-06571.herokuapp.com/appointments')
         .then(res=>res.json())
         .then(data=>{
                 setAppointments(data);
